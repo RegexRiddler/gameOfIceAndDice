@@ -1,5 +1,77 @@
-.header
+.header 
+  +beveledBg($header-bg)
   width: 100%
-  height: 50px
-  background-color: black
+  height: 48px
+  background-color: $header-bg
+
+.header_text
+  float: left
+  margin-left: 16px
+  +monogram-font(32px, $dark-text)
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+.menu_toggle 
+  z-index: 100
+  position: fixed
+  left: 100%
+  transform: translateX(-48px)
+  display: inline-block
+  cursor: pointer
+  margin-right: 16px
+  margin-top: 12px
+
+  span
+    width: 32px
+    height: 4px
+    background-color: $light-text
+    box-shadow: 1px 1px darken($light-text, 40%)
+    display: block
+    transition-duration: 0.3s
+  
+  span:nth-of-type(2)
+    margin: 6px 0
+
+.menu_toggle-open
+  span
+    background-color: $dark-text
+
+  span:nth-of-type(1)
+    transform: translate(0px, 10px) rotate(-45deg)
+    box-shadow: 0 1px darken($dark-text, 40%)
+
+  span:nth-of-type(2)
+    opacity: 0
+
+  span:nth-of-type(3)
+    transform: translate(0px, -10px) rotate(45deg)
+    box-shadow: 1px 0 darken($dark-text, 40%)
+
+.menu
+  +monogram-font(48px, $dark-text)
+  width: 70%
+  height: 480px
+  background-color: $header-menu
+  position: absolute
+  top: 0
+  left: 100%
+  padding-top: 80px
+  padding-right: 16px
+  text-align: right
+  display: none
+
+  ul
+    li
+      margin-bottom: 16px
+
+  a
+    color: inherit
+
+  img
+    height: 24px
+
+.menu-open
+  z-index: 80
+  left: 30%
   display: block

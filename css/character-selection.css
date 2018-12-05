@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none; }
+
+@font-face {
+  font-family: "monogram";
+  src: url("monogram.woff2") format("woff2");
+  src: url("monogram.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.header {
+  background-color: #C9B499;
+  border-left: 1px solid #ece5dc;
+  border-top: 1px solid #ece5dc;
+  border-right: 1px solid #dbcdba;
+  border-bottom: 1px solid #dbcdba;
+  -webkit-box-shadow: 0px 2px #624e34;
+  box-shadow: 0px 2px #624e34;
+  width: 100%;
+  height: 48px;
+  background-color: #C9B499; }
+
+.header_text {
+  float: left;
+  margin-left: 16px;
+  font-family: "monogram", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #818181;
+  text-shadow: 1px 1px #1b1b1b;
+  line-height: 16px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.menu_toggle {
+  z-index: 100;
+  position: fixed;
+  left: 100%;
+  -webkit-transform: translateX(-48px);
+  -ms-transform: translateX(-48px);
+  transform: translateX(-48px);
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-top: 12px; }
+  .menu_toggle span {
+    width: 32px;
+    height: 4px;
+    background-color: #F2F2F2;
+    -webkit-box-shadow: 1px 1px #8c8c8c;
+    box-shadow: 1px 1px #8c8c8c;
+    display: block;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .menu_toggle span:nth-of-type(2) {
+    margin: 6px 0; }
+
+.menu_toggle-open span {
+  background-color: #818181; }
+
+.menu_toggle-open span:nth-of-type(1) {
+  -webkit-transform: translate(0px, 10px) rotate(-45deg);
+  -ms-transform: translate(0px, 10px) rotate(-45deg);
+  transform: translate(0px, 10px) rotate(-45deg);
+  -webkit-box-shadow: 0 1px #1b1b1b;
+  box-shadow: 0 1px #1b1b1b; }
+
+.menu_toggle-open span:nth-of-type(2) {
+  opacity: 0; }
+
+.menu_toggle-open span:nth-of-type(3) {
+  -webkit-transform: translate(0px, -10px) rotate(45deg);
+  -ms-transform: translate(0px, -10px) rotate(45deg);
+  transform: translate(0px, -10px) rotate(45deg);
+  -webkit-box-shadow: 1px 0 #1b1b1b;
+  box-shadow: 1px 0 #1b1b1b; }
+
+.menu {
+  font-family: "monogram", monospace;
+  font-size: 48px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #818181;
+  text-shadow: 1px 1px #1b1b1b;
+  line-height: 24px;
+  width: 70%;
+  height: 480px;
+  background-color: #F2F2F2;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding-top: 80px;
+  padding-right: 16px;
+  text-align: right;
+  display: none; }
+  .menu ul li {
+    margin-bottom: 16px; }
+  .menu a {
+    color: inherit; }
+  .menu img {
+    height: 24px; }
+
+.menu-open {
+  z-index: 80;
+  left: 30%;
+  display: block; }
+
+.container {
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.character_information {
+  width: 100%;
+  height: 304px;
+  display: block;
+  background-image: url("../images/character-background.png");
+  background-size: cover; }
+
+.character_selection {
+  background-color: #C9B499;
+  -webkit-transform: translate(-1px, -1px);
+  -ms-transform: translate(-1px, -1px);
+  transform: translate(-1px, -1px); }
+  .character_selection span {
+    width: 64px;
+    height: 64px;
+    float: left;
+    display: inline-block;
+    -webkit-transform: translate(1px, 1px);
+    -ms-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+    cursor: pointer; }
+  .character_selection #char1 {
+    background-image: url(../images/avatars/jon-snow.png); }
+  .character_selection #char2 {
+    background-image: url(../images/avatars/samwell-tarly.png); }
+  .character_selection #char3 {
+    background-image: url(../images/avatars/brandon-stark-and-walder.png); }
+  .character_selection #char4 {
+    background-image: url(../images/avatars/gregor-clegane.png); }
+  .character_selection #char5 {
+    background-image: url(../images/avatars/khal-drogo.png); }
+  .character_selection #char6 {
+    background-image: url(../images/avatars/cersei-lannister.png); }
+  .character_selection #char7 {
+    background-image: url(../images/avatars/arya-stark.png); }
+  .character_selection #char8 {
+    background-image: url(../images/avatars/daenerys-targaryen.png); }
+  .character_selection #char9 {
+    background-image: url(../images/avatars/melisandre.png); }
+  .character_selection #char10 {
+    background-image: url(../images/avatars/brienne-of-tarth.png); }
+  .character_selection #char1, .character_selection #char2, .character_selection #char3, .character_selection #char4, .character_selection #char5, .character_selection #char6, .character_selection #char7, .character_selection #char8, .character_selection #char9, .character_selection #char10 {
+    background-size: cover; }

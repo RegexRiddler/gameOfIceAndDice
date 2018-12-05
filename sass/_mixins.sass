@@ -1,0 +1,8 @@
+=beveledBg($color, $highlightSize: 1px, $shadowX: 0px, $shadowY: 2px)
+  background-color: $color
+  border-left: $highlightSize solid lighten($color, 20%)
+  border-top: $highlightSize solid lighten($color, 20%)
+  border-right: $highlightSize solid lighten($color, 10%)
+  border-bottom: $highlightSize solid lighten($color, 10%)
+  box-shadow: $shadowX $shadowY darken($color, 40%)
+

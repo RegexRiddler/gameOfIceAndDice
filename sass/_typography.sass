@@ -4,3 +4,13 @@
   src: url("monogram.woff") format("woff")
   font-weight: normal
   font-style: normal
+
+=monogram-font($size, $color)
+  font-family: "monogram", monospace
+  font-size: $size
+  font-weight: normal
+  text-transform: uppercase
+  text-decoration: none
+  color: $color
+  text-shadow: 1px 1px darken($color, 40%)
+  line-height: $size / 2
