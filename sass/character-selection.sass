@@ -6,16 +6,47 @@
   display: block
   background-image: url("../images/character-background.png")
   background-size: cover
+  text-align: center
+  padding-top: 16px
+  position: relative
+  top: 2px
+
+  #characterName
+    +monogram-font(48px, $light-text)
+    display: block
+
+  #characterAlias
+    +monogram-font(32px, $dark-text)
+    display: block
+    margin-top: 16px
+
+  #characterImage
+    transform-origin: bottom left
+    transform: scale(0.5)
+    display: inline-block
+    position: absolute
+    bottom: 16px
+    left: 16px
+  
+  #characterSelect
+    +beveled-background($trap-red)
+    +monogram-font(32px, $light-text)
+    padding: 4px
+    margin-top: 32px
+    cursor: pointer
+    float: right
+    position: absolute
+    bottom: 64px
+    right: 16px
 
 .character_selection
-  background-color: $default
+  background-color: $default-sand
   transform: translate(-1px, -1px)
 
   span
     width: 64px
     height: 64px
     float: left
-    // border: 1px solid $light-bg
     display: inline-block
     transform: translate(1px, 1px)
     cursor: pointer
@@ -50,5 +81,38 @@
   #char10
     background-image: url(../images/avatars/brienne-of-tarth.png)
 
-  #char1, #char2, #char3, #char4, #char5, #char6, #char7, #char8, #char9, #char10,
+  #char1, #char2, #char3, #char4, #char5, #char6, #char7, #char8, #char9, #char10
     background-size: cover
+
+@media only screen and (min-width: 640px)
+  .character_information
+    height: 608px
+    padding-top: 32px
+    top: 4px
+
+    #characterName
+      +monogram-font(96px, $light-text)
+
+    #characterAlias
+      +monogram-font(64px, $dark-text)
+      margin-top: 32px
+
+    #characterImage
+      transform: scale(1)
+      bottom: 32px
+      left: 32px
+    
+    #characterSelect
+      +monogram-font(64px, $light-text)
+      padding: 8px
+      margin-top: 64px
+      bottom: 128px
+      right: 32px
+
+  .character_selection
+    transform: translate(-2px, -2px)
+
+    span
+      width: 128px
+      height: 128px
+      transform: translate(2px, 2px)

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Maximilian Dybvik">
+  <meta name="description" content="A game og thrones inspired dice game">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/game-board.css">
+
+  <title>A Game of Ice and Dice</title>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1 class="header_text">Ice & Dice</h1>
+
+      <div class="menu_toggle" onclick="openMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+            <img src="images/icons/home-icon.png" alt="home icon"></li>
+          <li>
+            <a href="character-selection.html">Restart</a>
+            <img src="images/icons/restart-icon.png" alt="restart icon"></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <div class="board">
+      <!-- ROW 1 -->
+      <div id="pos30" class="field finish"> <span>30</span></div>
+      <div id="pos29" class="field"> <span>29</span> </div>
+      <div id="pos22" class="field"> <span>22</span> </div>
+      <div id="pos21" class="field trap"> <span>21</span> </div>
+      <div id="pos20" class="field"> <span>20</span> </div>
+      <!-- ROW 2 -->
+      <div id="pos27" class="field"> <span>27</span> </div>
+      <div id="pos28" class="field trap"> <span>28</span> </div>
+      <div id="pos23" class="field"> <span>23</span> </div>
+      <div id="pos18" class="field"> <span>18</span> </div>
+      <div id="pos19" class="field"> <span>19</span> </div>
+      <!-- ROW 3 -->
+      <div id="pos26" class="field"> <span>26</span> </div>
+      <div id="pos25" class="field"> <span>25</span> </div>
+      <div id="pos24" class="field trap"> <span>24</span> </div>
+      <div id="pos17" class="field"> <span>17</span> </div>
+      <div id="pos16" class="field"> <span>16</span> </div>
+      <!-- ROW 4 -->
+      <div id="pos9" class="field"> <span>9</span> </div>
+      <div id="pos10" class="field trap"> <span>10</span> </div>
+      <div id="pos11" class="field"> <span>11</span> </div>
+      <div id="pos12" class="field"> <span>12</span> </div>
+      <div id="pos15" class="field"> <span>15</span> </div>
+      <!-- ROW 5 -->
+      <div id="pos8" class="field"> <span>8</span> </div>
+      <div id="pos5" class="field"> <span>5</span> </div>
+      <div id="pos4" class="field"> <span>4</span> </div>
+      <div id="pos13" class="field trap"> <span>13</span> </div>
+      <div id="pos14" class="field"> <span>14</span> </div>
+      <!-- ROW 6 -->
+      <div id="pos7" class="field trap"> <span>7</span> </div>
+      <div id="pos6" class="field"> <span>6</span> </div>
+      <div id="pos3" class="field"> <span>3</span> </div>
+      <div id="pos2" class="field"> <span>2</span> </div>
+      <div id="pos1" class="field"> <span>1</span> </div>
+    </div>
+    
+
+    <div class="roll">
+      <span id="die">0</span>
+      <button id="button" role="button">roll die</button>
+    </div>
+
+  </div>
+    
+
+  <!-- JavaScript -->
+  <script src="js/gameBoard.js"></script>
+  <script>
+    function openMenu(node) {
+    node.classList.toggle("menu_toggle-open");
+    document.getElementById("menu").classList.toggle("menu-open");
+    }
+  </script>
+</body>
+</html>

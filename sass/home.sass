@@ -1,6 +1,6 @@
 @import "main"
 
-.container-home
+.container
   background-color: $dark-bg
   text-align: center
 
@@ -13,8 +13,22 @@
   margin-top: 32px
 
 button
-  +beveledBg($trap)
+  +beveled-background($trap-red)
   +monogram-font(32px, $light-text)
   padding: 4px
   margin-top: 32px
   cursor: pointer
+
+@media only screen and (min-width: 640px)
+  .heading
+    +monogram-font(64px, $light-text)
+    margin-top: 64px
+
+  .sub-heading
+    +monogram-font(48px, $light-text)
+    margin-top: 64px
+
+  button
+    +monogram-font(64px, $light-text)
+    padding: 8px
+    margin-top: 64px

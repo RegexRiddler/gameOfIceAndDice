@@ -1,8 +1,7 @@
 .header 
-  +beveledBg($header-bg)
+  +beveled-background($default-sand)
   width: 100%
   height: 48px
-  background-color: $header-bg
 
 .header_text
   float: left
@@ -75,3 +74,48 @@
   z-index: 80
   left: 30%
   display: block
+
+@media only screen and (min-width: 640px)
+  .header
+    +beveled-background($default-sand, 2px, 0px, 4px)
+    height: 96px
+
+  .header_text
+    margin-left: 32px
+    +monogram-font(64px, $dark-text)
+
+  .menu_toggle 
+    transform: translateX(-96px)
+    margin-right: 32px
+    margin-top: 24px
+
+    span
+      width: 64px
+      height: 8px
+      box-shadow: 2px 2px darken($light-text, 40%)
+    
+    span:nth-of-type(2)
+      margin: 12px 0
+
+  .menu_toggle-open
+
+    span:nth-of-type(1)
+      transform: translate(0px, 20px) rotate(-45deg)
+      box-shadow: 0 2px darken($dark-text, 40%)
+
+    span:nth-of-type(3)
+      transform: translate(0px, -20px) rotate(45deg)
+      box-shadow: 2px 0 darken($dark-text, 40%)
+
+  .menu
+    +monogram-font(96px, $dark-text)
+    height: 960px
+    padding-top: 160px
+    padding-right: 32px
+
+    ul
+      li
+        margin-bottom: 32px
+
+    img
+      height: 48px

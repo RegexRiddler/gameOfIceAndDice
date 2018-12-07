@@ -1,0 +1,64 @@
+@import "main"
+
+.container
+  background-image: url("../images/westeros-map.png")
+  background-size: cover
+
+.field 
+  width: 32px
+  height: 32px
+  margin: 16px
+  +beveled-background($default-sand, 2px, 2px, 2px)
+  display: block
+  float: left
+  text-align: center
+
+  img
+    height: 30px
+    width: 30px
+
+  span
+    +monogram-font(32px, $light-text)
+    line-height: 24px
+    margin-left: 2px
+
+.trap
+  +beveled-background($trap-red, 2px, 2px, 2px)
+
+.finish
+  +beveled-background($finish-purple, 2px, 2px, 2px)
+
+.past-position
+  +beveled-background($past-grey, 2px, 2px, 2px)
+
+.roll 
+  +beveled-background($past-grey, 2px, 0, -1px)
+  clear: both
+  width: 100%
+  height: 48px
+  display: inline-block
+
+  #die
+    +beveled-background($default-sand)
+    +monogram-font(32px, $light-text)
+    padding: 4px
+    cursor: pointer
+    position: relative
+    top: 50%
+    left: 32px
+    margin-right: -32px
+    transform: translate(0, -50%)
+    float: left
+    margin-left:
+    display: inline-block
+
+  #button
+    +beveled-background($trap-red)
+    +monogram-font(32px, $light-text)
+    padding: 4px
+    cursor: pointer
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: inline-block

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="container container-home">
+  <div class="container">
     <header class="header">
       <h1 class="header_text">Ice & Dice</h1>
 
@@ -37,30 +37,31 @@
     </header>
     
     <div class="character_information">
-      <span id="characterName">Jon Snow</span>
-      <span id="characterAlias">Something</span>
+      <span id="characterName"></span>
+      <span id="characterAlias"></span>
+      <img id="characterImage" src="" alt="character image">
+      <a href="gameBoard.html"><button id="characterSelect">select</button></a>
     </div>
     <div class="character_selection">
-      <span id="char1"></span>
-      <span id="char2"></span>
-      <span id="char3"></span>
-      <span id="char4"></span>
-      <span id="char5"></span>
-      <span id="char6"></span>
-      <span id="char7"></span>
-      <span id="char8"></span>
-      <span id="char9"></span>
-      <span id="char10"></span>
+      <span id="char1" onclick="displayCharacter(jonSnow)"></span>
+      <span id="char2" onclick="displayCharacter(samwell)"></span>
+      <span id="char3" onclick="displayCharacter(walder)"></span>
+      <span id="char4" onclick="displayCharacter(gregorClegane)"></span>
+      <span id="char5" onclick="displayCharacter(khalDrogo)"></span>
+      <span id="char6" onclick="displayCharacter(cerseiLannister)"></span>
+      <span id="char7" onclick="displayCharacter(aryaStark)"></span>
+      <span id="char8" onclick="displayCharacter(daenerysTargaryen)"></span>
+      <span id="char9" onclick="displayCharacter(melisandre)"></span>
+      <span id="char10" onclick="displayCharacter(brienneOfTarth)"></span>
     </div>
-
   </div>
 
 
   <!-- JavaScript -->
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/characterSelection.js"></script>
   <script>
-    function openMenu(x) {
-    x.classList.toggle("menu_toggle-open");
+    function openMenu(node) {
+    node.classList.toggle("menu_toggle-open");
     document.getElementById("menu").classList.toggle("menu-open");
     }
   </script>

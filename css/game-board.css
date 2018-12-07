@@ -193,49 +193,106 @@
     width: 640px;
     height: 960px; } }
 
-.character_information {
-  width: 100%;
-  height: 304px;
+.container {
+  background-image: url("../images/westeros-map.png");
+  background-size: cover; }
+
+.field {
+  width: 32px;
+  height: 32px;
+  margin: 16px;
+  background-color: #C9B499;
+  border-left: 2px solid #ece5dc;
+  border-top: 2px solid #ece5dc;
+  border-right: 2px solid #dbcdba;
+  border-bottom: 2px solid #dbcdba;
+  -webkit-box-shadow: 2px 2px #624e34;
+  box-shadow: 2px 2px #624e34;
   display: block;
-  background-image: url("../images/character-background.png");
-  background-size: cover;
-  text-align: center;
-  padding-top: 16px;
-  position: relative;
-  top: 2px; }
-  .character_information #characterName {
-    font-family: "monogram", monospace;
-    font-size: 48px;
-    font-weight: normal;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #F2F2F2;
-    text-shadow: 1px 1px #8c8c8c;
-    line-height: 24px;
-    display: block; }
-  .character_information #characterAlias {
+  float: left;
+  text-align: center; }
+  .field img {
+    height: 30px;
+    width: 30px; }
+  .field span {
     font-family: "monogram", monospace;
     font-size: 32px;
     font-weight: normal;
     text-transform: uppercase;
     text-decoration: none;
-    color: #818181;
-    text-shadow: 1px 1px #1b1b1b;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
     line-height: 16px;
-    display: block;
-    margin-top: 16px; }
-  .character_information #characterImage {
-    -webkit-transform-origin: bottom left;
-    -ms-transform-origin: bottom left;
-    transform-origin: bottom left;
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
-    display: inline-block;
-    position: absolute;
-    bottom: 16px;
-    left: 16px; }
-  .character_information #characterSelect {
+    line-height: 24px;
+    margin-left: 2px; }
+
+.trap {
+  background-color: #C75D5F;
+  border-left: 2px solid #e1a9aa;
+  border-top: 2px solid #e1a9aa;
+  border-right: 2px solid #d48384;
+  border-bottom: 2px solid #d48384;
+  -webkit-box-shadow: 2px 2px #411717;
+  box-shadow: 2px 2px #411717; }
+
+.finish {
+  background-color: #785CC7;
+  border-left: 2px solid #b7a8e1;
+  border-top: 2px solid #b7a8e1;
+  border-right: 2px solid #9782d4;
+  border-bottom: 2px solid #9782d4;
+  -webkit-box-shadow: 2px 2px #211641;
+  box-shadow: 2px 2px #211641; }
+
+.past-position {
+  background-color: #818181;
+  border-left: 2px solid #b4b4b4;
+  border-top: 2px solid #b4b4b4;
+  border-right: 2px solid #9b9b9b;
+  border-bottom: 2px solid #9b9b9b;
+  -webkit-box-shadow: 2px 2px #1b1b1b;
+  box-shadow: 2px 2px #1b1b1b; }
+
+.roll {
+  background-color: #818181;
+  border-left: 2px solid #b4b4b4;
+  border-top: 2px solid #b4b4b4;
+  border-right: 2px solid #9b9b9b;
+  border-bottom: 2px solid #9b9b9b;
+  -webkit-box-shadow: 0 -1px #1b1b1b;
+  box-shadow: 0 -1px #1b1b1b;
+  clear: both;
+  width: 100%;
+  height: 48px;
+  display: inline-block; }
+  .roll #die {
+    background-color: #C9B499;
+    border-left: 2px solid #ece5dc;
+    border-top: 2px solid #ece5dc;
+    border-right: 2px solid #dbcdba;
+    border-bottom: 2px solid #dbcdba;
+    -webkit-box-shadow: 0px 2px #624e34;
+    box-shadow: 0px 2px #624e34;
+    font-family: "monogram", monospace;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 16px;
+    padding: 4px;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    left: 32px;
+    margin-right: -32px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    float: left;
+    display: inline-block; }
+  .roll #button {
     background-color: #C75D5F;
     border-left: 2px solid #e1a9aa;
     border-top: 2px solid #e1a9aa;
@@ -252,100 +309,11 @@
     text-shadow: 1px 1px #8c8c8c;
     line-height: 16px;
     padding: 4px;
-    margin-top: 32px;
     cursor: pointer;
-    float: right;
-    position: absolute;
-    bottom: 64px;
-    right: 16px; }
-
-.character_selection {
-  background-color: #C9B499;
-  -webkit-transform: translate(-1px, -1px);
-  -ms-transform: translate(-1px, -1px);
-  transform: translate(-1px, -1px); }
-  .character_selection span {
-    width: 64px;
-    height: 64px;
-    float: left;
-    display: inline-block;
-    -webkit-transform: translate(1px, 1px);
-    -ms-transform: translate(1px, 1px);
-    transform: translate(1px, 1px);
-    cursor: pointer; }
-  .character_selection #char1 {
-    background-image: url(../images/avatars/jon-snow.png); }
-  .character_selection #char2 {
-    background-image: url(../images/avatars/samwell-tarly.png); }
-  .character_selection #char3 {
-    background-image: url(../images/avatars/brandon-stark-and-walder.png); }
-  .character_selection #char4 {
-    background-image: url(../images/avatars/gregor-clegane.png); }
-  .character_selection #char5 {
-    background-image: url(../images/avatars/khal-drogo.png); }
-  .character_selection #char6 {
-    background-image: url(../images/avatars/cersei-lannister.png); }
-  .character_selection #char7 {
-    background-image: url(../images/avatars/arya-stark.png); }
-  .character_selection #char8 {
-    background-image: url(../images/avatars/daenerys-targaryen.png); }
-  .character_selection #char9 {
-    background-image: url(../images/avatars/melisandre.png); }
-  .character_selection #char10 {
-    background-image: url(../images/avatars/brienne-of-tarth.png); }
-  .character_selection #char1, .character_selection #char2, .character_selection #char3, .character_selection #char4, .character_selection #char5, .character_selection #char6, .character_selection #char7, .character_selection #char8, .character_selection #char9, .character_selection #char10 {
-    background-size: cover; }
-
-@media only screen and (min-width: 640px) {
-  .character_information {
-    height: 608px;
-    padding-top: 32px;
-    top: 4px; }
-    .character_information #characterName {
-      font-family: "monogram", monospace;
-      font-size: 96px;
-      font-weight: normal;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #F2F2F2;
-      text-shadow: 1px 1px #8c8c8c;
-      line-height: 48px; }
-    .character_information #characterAlias {
-      font-family: "monogram", monospace;
-      font-size: 64px;
-      font-weight: normal;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #818181;
-      text-shadow: 1px 1px #1b1b1b;
-      line-height: 32px;
-      margin-top: 32px; }
-    .character_information #characterImage {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      bottom: 32px;
-      left: 32px; }
-    .character_information #characterSelect {
-      font-family: "monogram", monospace;
-      font-size: 64px;
-      font-weight: normal;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #F2F2F2;
-      text-shadow: 1px 1px #8c8c8c;
-      line-height: 32px;
-      padding: 8px;
-      margin-top: 64px;
-      bottom: 128px;
-      right: 32px; }
-  .character_selection {
-    -webkit-transform: translate(-2px, -2px);
-    -ms-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px); }
-    .character_selection span {
-      width: 128px;
-      height: 128px;
-      -webkit-transform: translate(2px, 2px);
-      -ms-transform: translate(2px, 2px);
-      transform: translate(2px, 2px); } }
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: inline-block; }
