@@ -85,7 +85,6 @@ function displayCharacter(character) {
      characterName.innerHTML = data.name;
      characterAlias.innerHTML = data.aliases[character.alias];
      characterImage.src = character.image;
-     console.log(data.aliases);
   })
   .catch(error => console.log(error));
 

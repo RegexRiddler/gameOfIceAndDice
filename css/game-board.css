@@ -210,10 +210,8 @@
   box-shadow: 2px 2px #624e34;
   display: block;
   float: left;
-  text-align: center; }
-  .field img {
-    height: 30px;
-    width: 30px; }
+  text-align: center;
+  position: relative; }
   .field span {
     font-family: "monogram", monospace;
     font-size: 32px;
@@ -225,6 +223,13 @@
     line-height: 16px;
     line-height: 24px;
     margin-left: 2px; }
+  .field img {
+    height: 32px;
+    width: 32px;
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: -2px; }
 
 .trap {
   background-color: #C75D5F;
@@ -292,7 +297,7 @@
     transform: translate(0, -50%);
     float: left;
     display: inline-block; }
-  .roll #button {
+  .roll #rollButton {
     background-color: #C75D5F;
     border-left: 2px solid #e1a9aa;
     border-top: 2px solid #e1a9aa;
@@ -317,3 +322,223 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: inline-block; }
+
+#trapCard {
+  display: none;
+  width: 320px;
+  height: 432px;
+  background-color: rgba(199, 93, 95, 0.8);
+  position: absolute;
+  bottom: 0;
+  padding: 128px 16px;
+  left: 0;
+  font-family: "monogram", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2F2F2;
+  text-shadow: 1px 1px #8c8c8c;
+  line-height: 16px;
+  text-align: center; }
+  #trapCard span {
+    display: block;
+    line-height: 24px; }
+  #trapCard button {
+    background-color: #818181;
+    border-left: 2px solid #b4b4b4;
+    border-top: 2px solid #b4b4b4;
+    border-right: 2px solid #9b9b9b;
+    border-bottom: 2px solid #9b9b9b;
+    -webkit-box-shadow: 0px 2px #1b1b1b;
+    box-shadow: 0px 2px #1b1b1b;
+    display: block;
+    margin-top: 32px;
+    padding: 4px;
+    font-family: "monogram", monospace;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 16px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer; }
+
+#npcTrapCard {
+  display: none;
+  width: 320px;
+  height: 432px;
+  background-color: HSLA(224, 31%, 62%, 0.8);
+  position: absolute;
+  bottom: 0;
+  padding: 128px 16px;
+  left: 0;
+  font-family: "monogram", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2F2F2;
+  text-shadow: 1px 1px #8c8c8c;
+  line-height: 16px;
+  text-align: center; }
+  #npcTrapCard span {
+    display: block;
+    line-height: 24px; }
+  #npcTrapCard button {
+    background-color: #818181;
+    border-left: 2px solid #b4b4b4;
+    border-top: 2px solid #b4b4b4;
+    border-right: 2px solid #9b9b9b;
+    border-bottom: 2px solid #9b9b9b;
+    -webkit-box-shadow: 0px 2px #1b1b1b;
+    box-shadow: 0px 2px #1b1b1b;
+    display: block;
+    margin-top: 32px;
+    padding: 4px;
+    font-family: "monogram", monospace;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 16px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer; }
+
+#victory, #defeat {
+  display: none;
+  width: 320px;
+  height: 432px;
+  background-color: HSLA(27, 16%, 13%, 0.8);
+  position: absolute;
+  top: 48px;
+  left: 0;
+  font-family: "monogram", monospace;
+  font-size: 64px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #785CC7;
+  text-shadow: 1px 1px #211641;
+  line-height: 32px;
+  text-align: center;
+  padding-top: 32px; }
+  #victory span:nth-of-type(1), #defeat span:nth-of-type(1) {
+    display: block;
+    margin-bottom: 16px; }
+  #victory span:nth-of-type(2), #defeat span:nth-of-type(2) {
+    font-family: "monogram", monospace;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 16px; }
+  #victory img, #defeat img {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: translateX(-50%) scale(0.5);
+    -ms-transform: translateX(-50%) scale(0.5);
+    transform: translateX(-50%) scale(0.5); }
+  #victory span:nth-of-type(3), #defeat span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 64px;
+    width: 320px;
+    background-color: #818181;
+    border-left: 2px solid #b4b4b4;
+    border-top: 2px solid #b4b4b4;
+    border-right: 2px solid #9b9b9b;
+    border-bottom: 2px solid #9b9b9b;
+    -webkit-box-shadow: 0 0 #1b1b1b;
+    box-shadow: 0 0 #1b1b1b; }
+    #victory span:nth-of-type(3) button, #defeat span:nth-of-type(3) button {
+      cursor: pointer;
+      padding: 4px;
+      font-family: "monogram", monospace;
+      font-size: 32px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #F2F2F2;
+      text-shadow: 1px 1px #8c8c8c;
+      line-height: 16px;
+      background-color: #C75D5F;
+      border-left: 2px solid #e1a9aa;
+      border-top: 2px solid #e1a9aa;
+      border-right: 2px solid #d48384;
+      border-bottom: 2px solid #d48384;
+      -webkit-box-shadow: 0px 2px #411717;
+      box-shadow: 0px 2px #411717; }
+
+#defeat {
+  font-family: "monogram", monospace;
+  font-size: 64px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #C75D5F;
+  text-shadow: 1px 1px #411717;
+  line-height: 32px; }
+
+@media only screen and (min-width: 640px) {
+  .field {
+    width: 64px;
+    height: 64px;
+    margin: 32px; }
+    .field img {
+      height: 62px;
+      width: 62px; }
+    .field span {
+      font-family: "monogram", monospace;
+      font-size: 64px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #F2F2F2;
+      text-shadow: 1px 1px #8c8c8c;
+      line-height: 32px;
+      line-height: 48px;
+      margin-left: 4px; }
+  .roll {
+    height: 96px; }
+    .roll #die {
+      font-family: "monogram", monospace;
+      font-size: 64px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #F2F2F2;
+      text-shadow: 1px 1px #8c8c8c;
+      line-height: 32px;
+      padding: 8px;
+      left: 64px;
+      margin-right: -64px; }
+    .roll #button {
+      font-family: "monogram", monospace;
+      font-size: 64px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #F2F2F2;
+      text-shadow: 1px 1px #8c8c8c;
+      line-height: 32px;
+      padding: 8px; } }

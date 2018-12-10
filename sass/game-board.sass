@@ -12,15 +12,20 @@
   display: block
   float: left
   text-align: center
-
-  img
-    height: 30px
-    width: 30px
+  position: relative
 
   span
     +monogram-font(32px, $light-text)
     line-height: 24px
     margin-left: 2px
+
+  img
+    height: 32px
+    width: 32px
+    display: none
+    position: absolute
+    top: -2px
+    left: -2px
 
 .trap
   +beveled-background($trap-red, 2px, 2px, 2px)
@@ -52,7 +57,7 @@
     margin-left:
     display: inline-block
 
-  #button
+  #rollButton
     +beveled-background($trap-red)
     +monogram-font(32px, $light-text)
     padding: 4px
@@ -62,3 +67,130 @@
     left: 50%
     transform: translate(-50%, -50%)
     display: inline-block
+
+#trapCard
+  display: none
+  width: 320px
+  height: 432px
+  background-color: rgba($trap-red, .8)
+  position: absolute
+  bottom: 0
+  padding: 128px 16px
+  left: 0
+  +monogram-font(32px, $light-text)
+  text-align: center
+
+  span
+    display: block
+    line-height: 24px
+
+  button
+    +beveled-background($past-grey, 2px)
+    display: block
+    margin-top: 32px
+    padding: 4px
+    +monogram-font(32px, $light-text)
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    cursor: pointer
+
+#npcTrapCard
+  display: none
+  width: 320px
+  height: 432px
+  background-color: HSLA(224, 31%, 62%, .8)
+  position: absolute
+  bottom: 0
+  padding: 128px 16px
+  left: 0
+  +monogram-font(32px, $light-text)
+  text-align: center
+
+  span
+    display: block
+    line-height: 24px
+
+  button
+    +beveled-background($past-grey, 2px)
+    display: block
+    margin-top: 32px
+    padding: 4px
+    +monogram-font(32px, $light-text)
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    cursor: pointer
+
+#victory, #defeat
+  display: none
+  width: 320px
+  height: 432px
+  background-color: HSLA(27, 16%, 13%, 0.8)
+  position: absolute
+  top: 48px
+  left: 0
+  +monogram-font(64px, $finish-purple)
+  text-align: center
+  padding-top: 32px
+
+  span:nth-of-type(1)
+    display: block
+    margin-bottom: 16px
+
+  span:nth-of-type(2)
+    +monogram-font(32px, $light-text)
+
+  img
+    position: absolute
+    bottom: 64px
+    left: 50%
+    transform-origin: bottom center
+    transform: translateX(-50%) scale(.5)
+
+  span:nth-of-type(3)
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 64px
+    width: 320px
+    +beveled-background($past-grey, 2px, 0, 0)
+
+    button
+      cursor: pointer
+      padding: 4px
+      +monogram-font(32px, $light-text)
+      +beveled-background($trap-red)
+
+#defeat
+  +monogram-font(64px, $trap-red)
+
+
+@media only screen and (min-width: 640px)
+
+  .field 
+    width: 64px
+    height: 64px
+    margin: 32px
+
+    img
+      height: 62px
+      width: 62px
+
+    span
+      +monogram-font(64px, $light-text)
+      line-height: 48px
+      margin-left: 4px
+
+  .roll 
+    height: 96px
+
+    #die
+      +monogram-font(64px, $light-text)
+      padding: 8px
+      left: 64px
+      margin-right: -64px
+
+    #button
+      +monogram-font(64px, $light-text)
+      padding: 8px

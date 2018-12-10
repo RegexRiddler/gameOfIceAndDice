@@ -38,47 +38,74 @@
   
     <div class="board">
       <!-- ROW 1 -->
-      <div id="pos30" class="field finish"> <span>30</span></div>
-      <div id="pos29" class="field"> <span>29</span> </div>
-      <div id="pos22" class="field"> <span>22</span> </div>
-      <div id="pos21" class="field trap"> <span>21</span> </div>
-      <div id="pos20" class="field"> <span>20</span> </div>
+      <div id="pos30" class="field finish"> <span>30</span> <img src="" alt="character avatar"> </div>
+      <div id="pos29" class="field"> <span>29</span> <img src="" alt="character avatar"> </div>
+      <div id="pos22" class="field"> <span>22</span> <img src="" alt="character avatar"> </div>
+      <div id="pos21" class="field trap"> <span>21</span> <img src="" alt="character avatar"> </div>
+      <div id="pos20" class="field"> <span>20</span> <img src="" alt="character avatar"> </div>
       <!-- ROW 2 -->
-      <div id="pos27" class="field"> <span>27</span> </div>
-      <div id="pos28" class="field trap"> <span>28</span> </div>
-      <div id="pos23" class="field"> <span>23</span> </div>
-      <div id="pos18" class="field"> <span>18</span> </div>
-      <div id="pos19" class="field"> <span>19</span> </div>
+      <div id="pos27" class="field"> <span>27</span> <img src="" alt="character avatar"> </div>
+      <div id="pos28" class="field trap"> <span>28</span> <img src="" alt="character avatar"> </div>
+      <div id="pos23" class="field"> <span>23</span> <img src="" alt="character avatar"> </div>
+      <div id="pos18" class="field"> <span>18</span> <img src="" alt="character avatar"> </div>
+      <div id="pos19" class="field"> <span>19</span> <img src="" alt="character avatar"> </div>
       <!-- ROW 3 -->
-      <div id="pos26" class="field"> <span>26</span> </div>
-      <div id="pos25" class="field"> <span>25</span> </div>
-      <div id="pos24" class="field trap"> <span>24</span> </div>
-      <div id="pos17" class="field"> <span>17</span> </div>
-      <div id="pos16" class="field"> <span>16</span> </div>
+      <div id="pos26" class="field"> <span>26</span> <img src="" alt="character avatar"> </div>
+      <div id="pos25" class="field"> <span>25</span> <img src="" alt="character avatar"> </div>
+      <div id="pos24" class="field trap"> <span>24</span> <img src="" alt="character avatar"> </div>
+      <div id="pos17" class="field"> <span>17</span> <img src="" alt="character avatar"> </div>
+      <div id="pos16" class="field"> <span>16</span> <img src="" alt="character avatar"> </div>
       <!-- ROW 4 -->
-      <div id="pos9" class="field"> <span>9</span> </div>
-      <div id="pos10" class="field trap"> <span>10</span> </div>
-      <div id="pos11" class="field"> <span>11</span> </div>
-      <div id="pos12" class="field"> <span>12</span> </div>
-      <div id="pos15" class="field"> <span>15</span> </div>
+      <div id="pos9" class="field"> <span>9</span> <img src="" alt="character avatar"> </div>
+      <div id="pos10" class="field trap"> <span>10</span> <img src="" alt="character avatar"> </div>
+      <div id="pos11" class="field"> <span>11</span> <img src="" alt="character avatar"> </div>
+      <div id="pos12" class="field"> <span>12</span> <img src="" alt="character avatar"> </div>
+      <div id="pos15" class="field"> <span>15</span> <img src="" alt="character avatar"> </div>
       <!-- ROW 5 -->
-      <div id="pos8" class="field"> <span>8</span> </div>
-      <div id="pos5" class="field"> <span>5</span> </div>
-      <div id="pos4" class="field"> <span>4</span> </div>
-      <div id="pos13" class="field trap"> <span>13</span> </div>
-      <div id="pos14" class="field"> <span>14</span> </div>
+      <div id="pos8" class="field"> <span>8</span> <img src="" alt="character avatar"> </div>
+      <div id="pos5" class="field"> <span>5</span> <img src="" alt="character avatar"> </div>
+      <div id="pos4" class="field"> <span>4</span> <img src="" alt="character avatar"> </div>
+      <div id="pos13" class="field trap"> <span>13</span> <img src="" alt="character avatar"> </div>
+      <div id="pos14" class="field"> <span>14</span> <img src="" alt="character avatar"> </div>
       <!-- ROW 6 -->
-      <div id="pos7" class="field trap"> <span>7</span> </div>
-      <div id="pos6" class="field"> <span>6</span> </div>
-      <div id="pos3" class="field"> <span>3</span> </div>
-      <div id="pos2" class="field"> <span>2</span> </div>
-      <div id="pos1" class="field"> <span>1</span> </div>
+      <div id="pos7" class="field trap"> <span>7</span> <img src="" alt="character avatar"> </div>
+      <div id="pos6" class="field"> <span>6</span> <img src="" alt="character avatar"> </div>
+      <div id="pos3" class="field"> <span>3</span> <img src="" alt="character avatar"> </div>
+      <div id="pos2" class="field"> <span>2</span> <img src="" alt="character avatar"> </div>
+      <div id="pos1" class="field"> <span>1</span> <img src="" alt="character avatar"> </div>
     </div>
     
 
     <div class="roll">
       <span id="die">0</span>
-      <button id="button" role="button">roll die</button>
+      <button id="rollButton" role="button">roll die</button>
+    </div>
+
+    <div id="trapCard">
+      <span></span>
+      <button id="dismissTrapCard" role="button">dismiss</button>
+    </div>
+
+    <div id="npcTrapCard">
+      <span></span>
+      <button id="dismissNpcTrapCard" role="button">dismiss</button>
+    </div>
+
+    <div id="victory">
+      <span>victory!</span>
+      <span>you defeated the white walker, and rightfully clamed the throne</span>
+      <img id="victorImage" src="" alt="character image">
+      <span>
+        <a href="character-selection.html"><button role="button">play again</button></a>
+      </span>
+    </div>
+
+    <div id="defeat">
+      <span>defeat!</span>
+      <span>you where defeated by the white walker. <br> better luck next time</span>
+      <img src="images/characters/white-walker.png" alt="character image">
+      <span>
+        <a href="character-selection.html"><button role="button">try again</button></a>
     </div>
 
   </div>
