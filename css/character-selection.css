@@ -178,6 +178,9 @@
     .menu img {
       height: 48px; } }
 
+body {
+  background-color: HSLA(0, 0%, 0%, 0.8); }
+
 .container {
   width: 320px;
   height: 480px;
@@ -186,7 +189,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 8px 8px 16px HSLA(0, 0%, 0%, 0.5);
+  box-shadow: 8px 8px 16px HSLA(0, 0%, 0%, 0.5); }
 
 @media only screen and (min-width: 640px) {
   .container {
@@ -228,13 +233,13 @@
     -webkit-transform-origin: bottom left;
     -ms-transform-origin: bottom left;
     transform-origin: bottom left;
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
     display: inline-block;
     position: absolute;
     bottom: 16px;
-    left: 16px; }
+    left: 50%;
+    -webkit-transform: scale(0.5) translateX(-50%);
+    -ms-transform: scale(0.5) translateX(-50%);
+    transform: scale(0.5) translateX(-50%); }
   .character_information #characterSelect {
     background-color: #C75D5F;
     border-left: 2px solid #e1a9aa;
@@ -252,12 +257,13 @@
     text-shadow: 1px 1px #8c8c8c;
     line-height: 16px;
     padding: 4px;
-    margin-top: 32px;
+    margin-top: 16px;
     cursor: pointer;
-    float: right;
     position: absolute;
-    bottom: 64px;
-    right: 16px; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 .character_selection {
   background-color: #C9B499;
@@ -321,11 +327,9 @@
       line-height: 32px;
       margin-top: 32px; }
     .character_information #characterImage {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      bottom: 32px;
-      left: 32px; }
+      -webkit-transform: scale(1) translateX(-50%);
+      -ms-transform: scale(1) translateX(-50%);
+      transform: scale(1) translateX(-50%); }
     .character_information #characterSelect {
       font-family: "monogram", monospace;
       font-size: 64px;
@@ -336,9 +340,7 @@
       text-shadow: 1px 1px #8c8c8c;
       line-height: 32px;
       padding: 8px;
-      margin-top: 64px;
-      bottom: 128px;
-      right: 32px; }
+      margin-top: 32px; }
   .character_selection {
     -webkit-transform: translate(-2px, -2px);
     -ms-transform: translate(-2px, -2px);

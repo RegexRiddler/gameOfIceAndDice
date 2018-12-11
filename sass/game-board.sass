@@ -75,7 +75,7 @@
   background-color: rgba($trap-red, .8)
   position: absolute
   bottom: 0
-  padding: 128px 16px
+  padding: 64px 16px
   left: 0
   +monogram-font(32px, $light-text)
   text-align: center
@@ -102,7 +102,7 @@
   background-color: HSLA(224, 31%, 62%, .8)
   position: absolute
   bottom: 0
-  padding: 128px 16px
+  padding: 64px 16px
   left: 0
   +monogram-font(32px, $light-text)
   text-align: center
@@ -167,30 +167,100 @@
 
 
 @media only screen and (min-width: 640px)
-
   .field 
     width: 64px
     height: 64px
     margin: 32px
-
-    img
-      height: 62px
-      width: 62px
+    +beveled-background($default-sand, 4px, 4px, 4px)
 
     span
       +monogram-font(64px, $light-text)
       line-height: 48px
       margin-left: 4px
 
+    img
+      height: 64px
+      width: 64px
+      top: -4px
+      left: -4px
+
+  .trap
+    +beveled-background($trap-red, 4px, 4px, 4px)
+
+  .finish
+    +beveled-background($finish-purple, 4px, 4px, 4px)
+
+  .past-position
+    +beveled-background($past-grey, 4px, 4px, 4px)
+
   .roll 
+    +beveled-background($past-grey, 4px, 0, -2px)
     height: 96px
 
     #die
       +monogram-font(64px, $light-text)
-      padding: 8px
       left: 64px
       margin-right: -64px
 
-    #button
+    #rollButton
       +monogram-font(64px, $light-text)
       padding: 8px
+
+  #trapCard
+    width: 640px
+    height: 864px
+    padding: 128px 32px
+    +monogram-font(64px, $light-text)
+
+    span
+      line-height: 48px
+
+    button
+      +beveled-background($past-grey, 4px)
+      margin-top: 64px
+      padding: 8px
+      +monogram-font(64px, $light-text)
+
+  #npcTrapCard
+    width: 640px
+    height: 864px
+    padding: 128px 32px
+    +monogram-font(64px, $light-text)
+
+    span
+      line-height: 48px
+
+    button
+      +beveled-background($past-grey, 4px)
+      margin-top: 64px
+      padding: 8px
+      +monogram-font(64px, $light-text)
+
+  #victory, #defeat
+    width: 640px
+    height: 864px
+    top: 96px
+    +monogram-font(128px, $finish-purple)
+    padding-top: 64px
+
+    span:nth-of-type(1)
+      margin-bottom: 32px
+
+    span:nth-of-type(2)
+      +monogram-font(64px, $light-text)
+
+    img
+      bottom: 128px
+      transform: translateX(-50%) scale(1)
+
+    span:nth-of-type(3)
+      height: 128px
+      width: 640px
+      +beveled-background($past-grey, 4px, 0, 0)
+
+      button
+        padding: 8px
+        +monogram-font(64px, $light-text)
+
+  #defeat
+    +monogram-font(128px, $trap-red)

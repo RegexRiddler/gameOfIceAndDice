@@ -22,22 +22,22 @@
 
   #characterImage
     transform-origin: bottom left
-    transform: scale(0.5)
+    transform: 
     display: inline-block
     position: absolute
     bottom: 16px
-    left: 16px
+    left: 50%
+    transform: scale(0.5) translateX(-50%) 
   
   #characterSelect
     +beveled-background($trap-red)
     +monogram-font(32px, $light-text)
     padding: 4px
-    margin-top: 32px
+    margin-top: 16px
     cursor: pointer
-    float: right
     position: absolute
-    bottom: 64px
-    right: 16px
+    left: 50%
+    transform: translateX(-50%)
 
 .character_selection
   background-color: $default-sand
@@ -98,16 +98,12 @@
       margin-top: 32px
 
     #characterImage
-      transform: scale(1)
-      bottom: 32px
-      left: 32px
+      transform: scale(1) translateX(-50%) 
     
     #characterSelect
       +monogram-font(64px, $light-text)
       padding: 8px
-      margin-top: 64px
-      bottom: 128px
-      right: 32px
+      margin-top: 32px
 
   .character_selection
     transform: translate(-2px, -2px)

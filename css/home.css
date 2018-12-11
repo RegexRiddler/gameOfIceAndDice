@@ -178,6 +178,9 @@
     .menu img {
       height: 48px; } }
 
+body {
+  background-color: HSLA(0, 0%, 0%, 0.8); }
+
 .container {
   width: 320px;
   height: 480px;
@@ -186,7 +189,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 8px 8px 16px HSLA(0, 0%, 0%, 0.5);
+  box-shadow: 8px 8px 16px HSLA(0, 0%, 0%, 0.5); }
 
 @media only screen and (min-width: 640px) {
   .container {
