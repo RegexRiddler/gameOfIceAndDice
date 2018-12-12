@@ -47,7 +47,6 @@
     +beveled-background($default-sand)
     +monogram-font(32px, $light-text)
     padding: 4px
-    cursor: pointer
     position: relative
     top: 50%
     left: 32px
@@ -198,11 +197,13 @@
     height: 96px
 
     #die
+      +beveled-background($default-sand, 4px, 4px, 4px)
       +monogram-font(64px, $light-text)
       left: 64px
       margin-right: -64px
 
     #rollButton
+      +beveled-background($trap-red, 4px, 4px, 4px)
       +monogram-font(64px, $light-text)
       padding: 8px
 

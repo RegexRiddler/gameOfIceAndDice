@@ -69,8 +69,6 @@ const brienneOfTarth = {
   avatar: "images/avatars/brienne-of-tarth.png"
 };
 
-
-
 displayCharacter(jonSnow);
 
 function displayCharacter(character) {
@@ -91,3 +89,7 @@ function displayCharacter(character) {
   // Store íng the chosen character in local storage for retrieval on next page //
   localStorage.setItem("character", JSON.stringify(character));
 }
+
+characterSelect.addEventListener("click", function() {
+  document.getElementById("versusCard").style.display = "block";
+});

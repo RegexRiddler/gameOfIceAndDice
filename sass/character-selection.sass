@@ -84,6 +84,43 @@
   #char1, #char2, #char3, #char4, #char5, #char6, #char7, #char8, #char9, #char10
     background-size: cover
 
+#versusCard
+  display: none
+  width: 320px
+  height: 432px
+  background-color: HSLA(224, 31%, 62%, .9)
+  position: absolute
+  bottom: 0
+  padding: 64px 16px
+  left: 0
+  +monogram-font(32px, $light-text)
+  text-align: center
+
+  span:nth-of-type(1)
+    display: block
+    +monogram-font(48px, $trap-red)
+    margin-bottom: 16px
+
+  span:nth-of-type(2)
+    display: block
+    line-height: 24px
+
+  img
+    margin-top: -64px
+    transform-origin: bottom center
+    transform: scale(.5)
+
+  button
+    +beveled-background($past-grey, 2px)
+    display: block
+    margin-top: 32px
+    padding: 4px
+    +monogram-font(32px, $light-text)
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    cursor: pointer
+
 @media only screen and (min-width: 640px)
   .character_information
     height: 608px
@@ -112,3 +149,26 @@
       width: 128px
       height: 128px
       transform: translate(2px, 2px)
+
+  #versusCard
+    width: 640px
+    height: 864px
+    padding: 128px 32px
+    +monogram-font(64px, $light-text)
+
+    span:nth-of-type(1)
+      +monogram-font(96px, $trap-red)
+      margin-bottom: 32px
+
+    span:nth-of-type(2)
+      line-height: 48px
+
+    img
+      margin-top: 64px
+      transform: scale(1)
+
+    button
+      +beveled-background($past-grey, 4px)
+      margin-top: 64px
+      padding: 8px
+      +monogram-font(64px, $light-text)

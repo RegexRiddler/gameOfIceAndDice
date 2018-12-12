@@ -17,6 +17,7 @@ const startTile = document.getElementById("pos1");
 startTile.querySelector("img").src = `${chosenCharacter.avatar}`;
 startTile.querySelector("img").style.display = "block";
 startTile.querySelector("span").innerHTML = "";
+document.getElementById("die").innerHTML = "Die: "
 
 rollButton.addEventListener("click", function() {
   if (isPlayerTurn === true) {
@@ -103,7 +104,7 @@ function setNewPosition(npcOrPlayer, dieRoll) {
 // The function that handle the players turn from start to finish //
 function movePlayer() {
   dieRoll = Math.floor((Math.random() * 6) + 1);
-  document.getElementById("die").innerHTML = dieRoll;
+  document.getElementById("die").innerHTML = "Die:" + dieRoll;
 
   if (playerPenaltyCounter > 0) {
     playerPenaltyCounter--

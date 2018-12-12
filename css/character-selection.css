@@ -304,6 +304,72 @@ body {
   .character_selection #char1, .character_selection #char2, .character_selection #char3, .character_selection #char4, .character_selection #char5, .character_selection #char6, .character_selection #char7, .character_selection #char8, .character_selection #char9, .character_selection #char10 {
     background-size: cover; }
 
+#versusCard {
+  display: none;
+  width: 320px;
+  height: 432px;
+  background-color: HSLA(224, 31%, 62%, 0.9);
+  position: absolute;
+  bottom: 0;
+  padding: 64px 16px;
+  left: 0;
+  font-family: "monogram", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2F2F2;
+  text-shadow: 1px 1px #8c8c8c;
+  line-height: 16px;
+  text-align: center; }
+  #versusCard span:nth-of-type(1) {
+    display: block;
+    font-family: "monogram", monospace;
+    font-size: 48px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #C75D5F;
+    text-shadow: 1px 1px #411717;
+    line-height: 24px;
+    margin-bottom: 16px; }
+  #versusCard span:nth-of-type(2) {
+    display: block;
+    line-height: 24px; }
+  #versusCard img {
+    margin-top: -64px;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5); }
+  #versusCard button {
+    background-color: #818181;
+    border-left: 2px solid #b4b4b4;
+    border-top: 2px solid #b4b4b4;
+    border-right: 2px solid #9b9b9b;
+    border-bottom: 2px solid #9b9b9b;
+    -webkit-box-shadow: 0px 2px #1b1b1b;
+    box-shadow: 0px 2px #1b1b1b;
+    display: block;
+    margin-top: 32px;
+    padding: 4px;
+    font-family: "monogram", monospace;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 16px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer; }
+
 @media only screen and (min-width: 640px) {
   .character_information {
     height: 608px;
@@ -352,4 +418,51 @@ body {
       height: 128px;
       -webkit-transform: translate(2px, 2px);
       -ms-transform: translate(2px, 2px);
-      transform: translate(2px, 2px); } }
+      transform: translate(2px, 2px); }
+  #versusCard {
+    width: 640px;
+    height: 864px;
+    padding: 128px 32px;
+    font-family: "monogram", monospace;
+    font-size: 64px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2F2F2;
+    text-shadow: 1px 1px #8c8c8c;
+    line-height: 32px; }
+    #versusCard span:nth-of-type(1) {
+      font-family: "monogram", monospace;
+      font-size: 96px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #C75D5F;
+      text-shadow: 1px 1px #411717;
+      line-height: 48px;
+      margin-bottom: 32px; }
+    #versusCard span:nth-of-type(2) {
+      line-height: 48px; }
+    #versusCard img {
+      margin-top: 64px;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+    #versusCard button {
+      background-color: #818181;
+      border-left: 4px solid #b4b4b4;
+      border-top: 4px solid #b4b4b4;
+      border-right: 4px solid #9b9b9b;
+      border-bottom: 4px solid #9b9b9b;
+      -webkit-box-shadow: 0px 2px #1b1b1b;
+      box-shadow: 0px 2px #1b1b1b;
+      margin-top: 64px;
+      padding: 8px;
+      font-family: "monogram", monospace;
+      font-size: 64px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #F2F2F2;
+      text-shadow: 1px 1px #8c8c8c;
+      line-height: 32px; } }

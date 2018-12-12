@@ -39,7 +39,7 @@
     <div class="character_information">
       <span id="characterName"></span>
       <span id="characterAlias"></span>
-      <a href="gameBoard.html"><button id="characterSelect">select</button></a>
+      <button id="characterSelect">select</button>
       <img id="characterImage" src="" alt="character image">
     </div>
     <div class="character_selection">
@@ -54,8 +54,14 @@
       <span id="char9" onclick="displayCharacter(melisandre)"></span>
       <span id="char10" onclick="displayCharacter(brienneOfTarth)"></span>
     </div>
-  </div>
 
+    <div id="versusCard">
+      <span>Your opponent</span>
+      <span>White Walker</span>
+      <img src="images/characters/white-walker.png" alt="white walker character image">
+      <a href="gameBoard.html"><button id="dismissVersusCard" role="button">continue</button></a>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script src="js/characterSelection.js"></script>

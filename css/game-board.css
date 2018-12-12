@@ -294,7 +294,6 @@ body {
     text-shadow: 1px 1px #8c8c8c;
     line-height: 16px;
     padding: 4px;
-    cursor: pointer;
     position: relative;
     top: 50%;
     left: 32px;
@@ -568,6 +567,13 @@ body {
     box-shadow: 0 -2px #1b1b1b;
     height: 96px; }
     .roll #die {
+      background-color: #C9B499;
+      border-left: 4px solid #ece5dc;
+      border-top: 4px solid #ece5dc;
+      border-right: 4px solid #dbcdba;
+      border-bottom: 4px solid #dbcdba;
+      -webkit-box-shadow: 4px 4px #624e34;
+      box-shadow: 4px 4px #624e34;
       font-family: "monogram", monospace;
       font-size: 64px;
       font-weight: normal;
@@ -579,6 +585,13 @@ body {
       left: 64px;
       margin-right: -64px; }
     .roll #rollButton {
+      background-color: #C75D5F;
+      border-left: 4px solid #e1a9aa;
+      border-top: 4px solid #e1a9aa;
+      border-right: 4px solid #d48384;
+      border-bottom: 4px solid #d48384;
+      -webkit-box-shadow: 4px 4px #411717;
+      box-shadow: 4px 4px #411717;
       font-family: "monogram", monospace;
       font-size: 64px;
       font-weight: normal;
