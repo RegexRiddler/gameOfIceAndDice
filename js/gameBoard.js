@@ -1,8 +1,8 @@
-// Retrieve chosen character from character selection page //
+// Retrieve chosen character from local storage //
 const retrievedCharacter = localStorage.getItem("character");
 const chosenCharacter = JSON.parse(retrievedCharacter)
 
-// Declare turn and position tracker //
+// Declare turn and position trackers //
 let dieRoll = null;
 let isPlayerTurn = true;
 let playerPosition = 1;
@@ -19,6 +19,7 @@ startTile.querySelector("img").style.display = "block";
 startTile.querySelector("span").innerHTML = "";
 document.getElementById("die").innerHTML = "Die: "
 
+// Roll die to initiate players turn //
 rollButton.addEventListener("click", function() {
   if (isPlayerTurn === true) {
     movePlayer();
@@ -189,7 +190,7 @@ function playerTraps(trapTile) {
 
   switch (trapTile) {
     case 7:
-        trapCard.querySelector("span").innerHTML = "you try to swim but your gear is too heavy. you swim back to build a raft instead";
+      trapCard.querySelector("span").innerHTML = "you try to swim but your gear is too heavy. you swim back to build a raft instead";
 
       setTimeout(() => {
         resetPreviousPosition("player");
@@ -198,7 +199,7 @@ function playerTraps(trapTile) {
       break;
       
     case 10:
-        trapCard.querySelector("span").innerHTML = "with an improvised raft you have made it almost to the shore of your destination, but you are met with strong currents and are dragged back to sea";
+      trapCard.querySelector("span").innerHTML = "with an improvised raft you have made it almost to the shore of your destination, but you are met with strong currents and are dragged back to sea";
 
       setTimeout(() => {
         resetPreviousPosition("player");
@@ -207,17 +208,17 @@ function playerTraps(trapTile) {
       break;
       
     case 13:
-        trapCard.querySelector("span").innerHTML = "your journey has taken you to the far east of westeros, you are tired and hungry, and decide to spend the night at a quiet inn. you wake up noticing your valuables are gone! you spend the next 2 turns tracking the thieves";
-        playerPenaltyCounter = 2;
+      trapCard.querySelector("span").innerHTML = "your journey has taken you to the far east of westeros, you are tired and hungry, and decide to spend the night at a quiet inn. you wake up noticing your valuables are gone! you spend the next 2 turns tracking the thieves";
+      playerPenaltyCounter = 2;
       break;
       
     case 21:
       trapCard.querySelector("span").innerHTML = "you are traveling high in the mountains and need to acclimate to the increasing altitudes. rest for 1 turn";
       playerPenaltyCounter = 1;
-    break;
+      break;
 
     case 24:
-        trapCard.querySelector("span").innerHTML = "you find yourself in a tavern brawl, outnumbered you are knocked unconsious. the next day you wake up in a haze of confusion and travel 2 paces in the wrong direction";
+      trapCard.querySelector("span").innerHTML = "you find yourself in a tavern brawl, outnumbered you are knocked unconsious. the next day you wake up in a haze of confusion and travel 2 paces in the wrong direction";
 
       setTimeout(() => {
         resetPreviousPosition("player");
@@ -226,8 +227,8 @@ function playerTraps(trapTile) {
       break;
 
     case 28:
-        trapCard.querySelector("span").innerHTML = "you have made it to the north, cold and slowed by the snow. next turn subtract 3 from your die roll";
-        playerDiePenalty = 3;
+      trapCard.querySelector("span").innerHTML = "you have made it to the north, cold and slowed by the snow. next turn subtract 3 from your die roll";
+      playerDiePenalty = 3;
       break;
   }
 }
